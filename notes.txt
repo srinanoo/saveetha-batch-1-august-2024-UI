@@ -1,0 +1,162 @@
+06-08-2024:
+
+Basic Coding Standards
+    Meaningful Names
+        Project Folder Name
+            assignment1-personal-portfolio
+            amazon
+            personal-blog
+            dinesh-blog
+    Naming Conventions
+        thisismyname
+        THISISMYNAME
+        thisIsMyName
+        ThisIsMyName
+        this-is-my-name
+        this_is_my_name
+    Code Indentations
+    Organising the Folder Structure
+        /project-folder
+            /assets/
+                /css/
+                    *.css
+                /images/
+                    *.*
+                /js/
+                    *.js
+            *.html
+
+Web Server
+    default.htm
+    default.html
+    index.htm
+    index.html
+    home.html 
+
+HTML TAGS
+    <NAME> => opening tag
+        ....
+    </NAME> => closing tag
+
+    Types:
+        2 Types
+            - Paired Tag
+                <tagName>
+                </tagName>
+            - Unpaired Tag or Self Closing Tag
+                <tagName>
+                or
+                <tagName />
+
+07-08-2024:
+    HTML Attributes
+        2 Types:
+            Paired Attributes
+            Unpaired Attributes or Self Closing Attributes
+
+        Sub Classification
+            3 Category
+                Core
+                    id
+                    class
+                    style
+                    title
+                Generic
+                Custom
+                    data-
+
+    Path
+        Absolute
+            C:\Users\SRI NANOO\Pictures\Capture.png
+        Relative
+            from the current project context
+                saveetha-batch-2-august-2024
+                    /images/background.jpg
+                
+    Tags:
+        Block
+        Inline
+
+08-08-2024:
+
+Template Coding:
+    Step 1: 2
+
+09-08-2024:
+
+    Form
+        HTTP GET
+            (default)
+                pattern:
+                    http://example.com/?key1=value1&key2=value2...
+                    (querystring)
+        HTTP POST
+            form body
+
+    Forms:
+        - Registration
+        - Contact
+        - Appeal
+        - Application
+        - Feedback
+        - Login
+        - Sign in / Sign up
+        - Survey
+        - Query
+        - Ticket
+            - Movie / Train / Room / Flight / Bus
+        - Event
+        - Enrollment
+        - Legal
+        - Deposit / Withdraw
+        - OD
+        - IT
+        - Scholarship
+        - Insurance
+        - Passport
+        - Aadhaar / Pan / Driving
+        - Admission
+        - Loan / Insurance / Policy
+        - Marriage / Divorce
+        - FIR
+        - Suspension
+        - Alumni
+        - Appointment
+        - Leave
+        - Trip
+        - Reevaluation
+        - Payment
+        - Petition
+        - Subscription
+        - Order
+        - Visa
+        - EB
+        - Plot Registration
+        - Birth / Death Certificate
+        - Bonafide
+        - Community
+        - Complaint
+        - Membership
+        - Voting / Voter
+        - Declaration
+        - Donor
+        - Referral
+        - Nomination
+        - Partnership
+        - Blood Group
+        - ID Card
+        - Checkin / Checkout
+        - Patent
+        - NOC
+        - ABC
+        - Rental
+        - NoDuty
+        - Physical Fitness
+        - Adoption
+        - Resignation
+        - Contract Agreement
+        - Affidavit
+        - GST
+        - Precaution
+        - ESI / PF
+            - 80 forms
