@@ -160,3 +160,52 @@ Template Coding:
         - Precaution
         - ESI / PF
             - 80 forms
+
+
+13-08-2024:
+
+    Find the difference between:
+        em vs rem
+        vh vs vw
+        initial vs inherit
+
+    Measurements:
+        px
+        pt
+        %
+
+        em
+        rem
+        pc
+
+        mm
+        cm
+        in
+
+        vh
+        vw
+
+    Colors:
+        rgb (red + green + blue)
+            value
+                0-255 + 0-255 + 0-255
+        rgba (red + green + blue + alpha) aka opacity or transparency
+                0-255 + 0-255 + 0-255 + 0-1
+
+                color: rgb(255, 255, 255)
+                color: #ffffff
+                color: #fff
+
+        hex
+            #000000
+                1st 2 values is for red
+                2nd 2 values is for green
+                3rd 2 values is for blue
+
+            0-9
+            a-f
+                #123456
+                #abcdef
+                #112233
+                #aabbcc
+                #a1b2c3
