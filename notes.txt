@@ -209,3 +209,33 @@ Template Coding:
                 #112233
                 #aabbcc
                 #a1b2c3
+
+19-08-2024
+
+    External
+    Internal
+
+        index.html (10kb)
+            css (3kb)
+
+        index.html (7kb)
+        styles.css (3kb)
+
+
+        index.html 10kb of html + 18kb of css (1kb of css)
+        about.html
+        contact.html (1kb of css)
+        services.html
+        portfolio.html (1kb of css)
+
+        styles.css (20kb)
+
+    Font
+
+    CSS Diner Task
+
+    <div>
+        ::before => prepend() in JS
+        ....
+        ::after => append() in JS
+    </div>
