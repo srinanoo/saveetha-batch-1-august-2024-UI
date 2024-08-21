@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+        img {
+            max-width: 100%;
+        }
+        .row1, .row2, .row3, .row4, .row5 {
+            background-color: red;
+            padding: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .row2 {
+            background-color: yellow;
+        }
+        .row1 div {
+            flex-basis: 16.6666666%;
+        }
+        .row2 div {
+            flex-basis: 25%;
+        }
+        .row3 div {
+            flex-basis: 33.3333333%;
+        }
+        .row4 div {
+            flex-basis: 50%;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .row2 div {
+                flex-basis: 50%;
+            }
+        }
+
+        @media only screen and (max-width: 576px) {
+            .row1 div {
+                flex-basis: 33.3333333%;
+            }
+            .row2 div {
+                flex-basis: 100%;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="row1">
+        <div class="col">
+            <img src="images/background.jpeg" alt="">
+            <p>Paragraph</p>
+        </div>
+        <div class="col">
+            <img src="images/background.jpeg" alt="">
+            <p>Paragraph</p>
+        </div>
+        <div class="col">
+            <img src="images/background.jpeg" alt="">
+            <p>Paragraph</p>
+        </div>
+        <div class="col">
+            <img src="images/background.jpeg" alt="">
+            <p>Paragraph</p>
+        </div>
+        <div class="col">
+            <img src="images/background.jpeg" alt="">
+            <p>Paragraph</p>
+        </div>
+        <div class="col">
+            <img src="images/background.jpeg" alt="">
+            <p>Paragraph</p>
+        </div>
+    </div>
+
+    <div class="row2">
+        <div class="col">
+            <img src="images/background.jpeg" alt="">
+            <p>Paragraph</p>
+        </div>
+        <div class="col">
+            <img src="images/background.jpeg" alt="">
+            <p>Paragraph</p>
+        </div>
+        <div class="col">
+            <img src="images/background.jpeg" alt="">
+            <p>Paragraph</p>
+        </div>
+        <div class="col">
+            <img src="images/background.jpeg" alt="">
+            <p>Paragraph</p>
+        </div>
+    </div>
+
+    <div class="row3">
+        <div class="col">
+            <img src="images/background.jpeg" alt="">
+            <p>Paragraph</p>
+        </div>
+        <div class="col">
+            <img src="images/background.jpeg" alt="">
+            <p>Paragraph</p>
+        </div>
+        <div class="col">
+            <img src="images/background.jpeg" alt="">
+            <p>Paragraph</p>
+        </div>
+    </div>
+
+    <div class="row4">
+        <div class="col">
+            <img src="images/background.jpeg" alt="">
+            <p>Paragraph</p>
+        </div>
+        <div class="col">
+            <img src="images/background.jpeg" alt="">
+            <p>Paragraph</p>
+        </div>
+    </div>
+
+    <div class="row5">
+        <div class="col">
+            <img src="images/background.jpeg" alt="">
+            <p>Paragraph</p>
+        </div>
+    </div>
+    
+</body>
+</html>
