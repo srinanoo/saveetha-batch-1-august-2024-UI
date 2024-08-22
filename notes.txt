@@ -275,3 +275,48 @@ Responsiveness
         @media only screen and (max-width:576px) {
             
         }
+
+22-08-2024
+
+    Positioning
+        - 1st Scenario
+            - Parent set to static (default)
+                - Child Containers
+                    - at least have 3 - 4 Containers
+                        make is static
+                            - spacing + direction
+                            - direction
+
+        - 2nd Scenario
+            - Parent set to relative
+                - Child Containers
+                    - at least have 3 - 4 Containers
+                        make is relative
+                            - spacing + direction
+                            - direction
+
+        - 3rd Scenario
+            - Parent set to relative
+                - Child Containers
+                    - at least have 3 - 4 Containers
+                        make is absolute
+                            - spacing + direction
+                            - direction
+
+                    - at least have 3 - 4 Containers
+                        some container is relative and others are absolute
+                            - spacing + direction
+                            - direction
+
+        - 4th Scenario
+            - Parent set to absolute
+                - Child Containers
+                    - at least have 3 - 4 Containers
+                        make is absolute
+                            - spacing + direction
+                            - direction
+
+                    - at least have 3 - 4 Containers
+                        some container is relative and others are absolute
+                            - spacing + direction
+                            - direction
