@@ -1,0 +1,36 @@
+section {
+    background-color: red
+}
+
+article {
+    background-color: #ff0;
+    width: 33%;
+    display: inline-block;
+    margin-right: -4px
+}
+
+.fluid {
+    background-color: #ff0
+}
+
+.box {
+    background-color: green;
+    width: 80%;
+    margin: 0 auto
+}
+
+.div1 {
+    font-size: 14px
+}
+
+.p1 {
+    font-size: 1.25em
+}
+
+.div2 {
+    font-size: 14px
+}
+
+.p2 {
+    font-size: 1rem
+}

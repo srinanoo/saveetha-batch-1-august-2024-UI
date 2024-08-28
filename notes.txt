@@ -320,3 +320,117 @@ Responsiveness
                         some container is relative and others are absolute
                             - spacing + direction
                             - direction
+
+    
+28-08-2024
+
+Bootstrap
+    pattern:
+        in CSS
+            property: value;
+                eg:
+                    justify-content: center;
+                    display: block;
+        in Bootstrap as class name
+            "property-value"
+                eg:
+                    "justify-content-center"
+                    "d-block"
+            if Responsive
+                eg:
+                    d-md-block
+
+    Spacing
+        in CSS
+            margin
+                margin
+                margin-top
+                margin-right
+                margin-bottom
+                margin-left
+        in Bootstrap
+                m
+                    m-0 => margin: 0;
+                    m-3 => margin: 16px;
+                mt
+                    mt-0
+                me in v5, mr in v4
+                mb
+                ms in v5, ml in v4
+                mx (ms + me)
+                    mx-0
+                my (mt + mb)
+            padding
+                padding
+                padding-top
+                padding-right
+                padding-bottom
+                padding-left
+        in Bootstrap
+                p
+                pt
+                pe in v5, pr in v4
+                pb
+                ps in v5, pl in v4
+                px (ps + pe)
+                py (pt + pb)
+    
+    Spacers
+            1 rem = 16px
+        0 = 0
+        1 = 0.25rem = 4px
+        2 = 0.5rem = 8px
+        3 = 1 rem = 16px
+        4 = 1.5rem = 24px
+        5 = 3rem = 48px
+
+    Sizing
+        in CSS
+            width
+            height
+        in Bootstrap
+            w
+                w-0 => width: 0;
+                w-100 => width: 100%;
+                w-50 => width: 50%;
+            h
+                0
+                25
+                50
+                75
+                100
+
+    Borders
+        in CSS
+            border: 1px solid red
+        in Bootstrap
+            border
+                border-0
+                border-1
+                border-2
+                border-3
+                border-4
+                border-5
+
+        in CSS
+            border-radius: 5px
+        in Bootstrap
+            rounded
+                rounded-0
+                rounded-1
+                rounded-2
+                rounded-3
+                rounded-4
+                rounded-5
+                rounded-pill
+                rounded-circle
+
+    Contextual Classes
+        primary
+        secondary
+        info
+        success
+        danger
+        warning
+        light
+        dark
