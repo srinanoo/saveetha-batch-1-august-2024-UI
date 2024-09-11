@@ -173,11 +173,106 @@
                 // ]
 
             // loop
-                let a = 0;
-                while(a < 10) {
-                    console.log(++a);
-                    // ++a;
+                // let a = 0;
+                // while(a < 10) {
+                //     console.log(++a);
+                //     // ++a;
+                // }
+
+                // let ageOfPeople = [15, 21, 18, 20, 35, 45, 60, 22, 12];
+                // let i = 0;
+                // while(i < ageOfPeople.length) {
+                //     if(ageOfPeople[i] >= 18) console.log(ageOfPeople[i]);
+                //     i++;
+                // }
+
+                // let a = 0;
+                // while(a < 0) {
+                //     console.log(a++);
+                // }
+
+                // do {
+                //     console.log(a++);
+                // } while(a < 0);
+
+                // console.time();
+                // let i = 0;
+                // while(i < 5) {
+                //     console.log(i);
+                //     i++;
+                // }
+                // console.timeEnd();
+
+                // console.time();
+                // for(let j = 0; j < 5; j++) {
+                //     console.log(j);
+                // }
+                // console.timeEnd();
+
+                // for (a = 0, b = 1; a <= 3; b += a, console.log(b), a++);
+
+                // for (a = 0, b = 1; a <= 3; a++) {
+                //     b += a;
+                //     console.log(b);
+                // }
+
+                // let arr = [1000, "Dinesh", true];
+                // let size = arr.length;
+                // console.log("... traditional for loop...");
+                // for(let i = 0; i < size; i++) {
+                //     console.log(arr[i]);
+                // }
+
+                // console.log("... for..in loop...");
+                // for(let temp in arr) {
+                //     console.log(arr[temp]);
+                // }
+
+                // console.log("... for..of loop...");
+                // for(let temp of arr) {
+                //     console.log(temp);
+                // }
+
+                // let obj = {
+                //     "id": 1,
+                //     "name": "Dinesh",
+                //     "active": true,
+                // }
+                // for(let temp in obj) {
+                //     console.log(obj[temp]);
+                // }
+
+                // let users = [
+                //     {
+                //         "id": 1,
+                //         "name": "Name 1",
+                //         "age": 20
+                //     },
+                //     {}
+                // ]
+                // 1 - Name 1 - 20
+                // 2 - Name 2 - 20
+                // 3 - Name 3 - 20
+
+            // looping controls
+                let ageOfPeople = [15, 21, 18, 20, 35, 45, 60, 22, 12, 13, 42, 50, 14, 16, 23, 56];
+                console.log(ageOfPeople.length);
+                let count = 0;
+                for(let i = 0; i < ageOfPeople.length; i++) {
+                    // if(ageOfPeople[i] >= 18)
+                    //     console.log(ageOfPeople[i]);
+                    //     count++;
+                    //     if(count == 5) {
+                    //         break;
+                    //     }
+                    if(ageOfPeople[i] >= 18 && count < 5) {
+                        console.log(ageOfPeople[i]);
+                        count++;
+                    }
+                    if(count == 5) break;
+                    console.log("- i", i);
                 }
+
     </script>
     <noscript>Please enable JS.</noscript>
 </body>
