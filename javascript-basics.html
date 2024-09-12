@@ -255,23 +255,144 @@
                 // 3 - Name 3 - 20
 
             // looping controls
-                let ageOfPeople = [15, 21, 18, 20, 35, 45, 60, 22, 12, 13, 42, 50, 14, 16, 23, 56];
-                console.log(ageOfPeople.length);
-                let count = 0;
-                for(let i = 0; i < ageOfPeople.length; i++) {
-                    // if(ageOfPeople[i] >= 18)
-                    //     console.log(ageOfPeople[i]);
-                    //     count++;
-                    //     if(count == 5) {
+                // let ageOfPeople = [15, 21, 18, 20, 35, 45, 60, 22, 12, 13, 42, 50, 14, 16, 23, 56];
+                // console.log(ageOfPeople.length);
+                // let count = 0;
+                // for(let i = 0; i < ageOfPeople.length; i++) {
+                //     // if(ageOfPeople[i] >= 18)
+                //     //     console.log(ageOfPeople[i]);
+                //     //     count++;
+                //     //     if(count == 5) {
+                //     //         break;
+                //     //     }
+                //     if(ageOfPeople[i] >= 18 && count < 5) {
+                //         console.log(ageOfPeople[i]);
+                //         count++;
+                //     }
+                //     if(count == 5) break;
+                //     console.log("- i", i);
+                // }
+
+            // function
+                // regular function
+                    // function testFunc(a = 1, b = 1) {
+                    //     // console.log("Function is called...")
+                    //     // let a = 10 + 10;
+                    //     return a+b; // data or variable or expression
+                    // }
+                    // let result = testFunc(1, 2);
+                    // console.log(result);
+                    // result = testFunc(4, 5);
+                    // console.log(result);
+                    // result = testFunc(, 10);
+                    // console.log(result);
+                    // testFunc();
+
+                // anonymous function
+                    // let testFunc1 = function(a, b) {
+                    //     console.log("Function is called");
+                    //     return "Function is called";
+                    // }
+                    // testFunc1(1, 2);
+
+                    // let obj = {
+                    //     "id": 1,
+                    //     getName: function() {
+                    //     }
+                    // }
+
+                // arrow function
+                    // let testFunc2 = a => a + 1;
+                    
+                    // let result2 = testFunc2(1);
+                    // console.log(result2);
+
+                
+                // testFunc();
+                // function testFunc() {
+                //     console.log("Function is called");
+                // }
+
+                // testFunc2();
+                // let testFunc2 = () => {
+                //     console.log("Arrow Function is called...");
+                // }
+
+                // let arr = [1000, "Dinesh", true];
+                // for (let i = 0; i < arr.length; i++) {
+                //     console.log(arr[i]);
+                // }
+
+                // arr.forEach(processArray);
+                // function processArray(v) {
+                //     console.log(v);
+                // }
+
+                // arr.forEach((v) => {
+                //     console.log(v);
+                // });
+
+                // arr.forEach(v => console.log(v));
+
+                // map
+                    // let a = [1,2,3,4,5];
+                    // let result = a.map(v => {
+                    //     return Math.sqrt(v)
+                    // });
+                    // console.log(a);
+                    // console.log(result);
+                
+                // filter
+                    // let names = ["Dinesh", "Dilip", "Shivani", "Sumathy", "John"];
+                    // let result = [];
+                    // for (let i = 0; i < names.length; i++) {
+                    //     if(names[i][0] !== "D")
+                    //         // console.log(names[i]);
+                    //         result.push(names[i]);
+                    // }
+                    // console.log(result);
+
+                    // let results = names.filter(v => v[0] !== "D");
+                    // console.log(results);
+
+                // some
+                    // let ageOfPeople = [15, 21, 18, 20, 35, 45, 60, 22, 12, 13, 42, 50, 14, 16, 23, 56];
+                    // let flag = false;
+                    // for(let i = 0; i < ageOfPeople.length; i++) {
+                    //     if(ageOfPeople[i] >= 18) {
+                    //         flag = true;
                     //         break;
                     //     }
-                    if(ageOfPeople[i] >= 18 && count < 5) {
-                        console.log(ageOfPeople[i]);
-                        count++;
+                    // }
+                    // console.log(flag);
+
+                    // let people = ageOfPeople.some(v => v >= 18);
+                    // console.log(people);
+
+                // every 
+                    // let ageOfPeople = [15, 21, 18, 20, 35, 45, 60, 22, 12, 13, 42, 50, 14, 16, 23, 56];
+                    // let flag = true;
+                    // for(let i = 0; i < ageOfPeople.length; i++) {
+                    //     if(ageOfPeople[i] < 18) {
+                    //         flag = false;
+                    //         break;
+                    //     }
+                    // }
+                    // console.log(flag);
+
+                    // let people = ageOfPeople.every(v => v < 18);
+                    // console.log(people);
+
+                // reduce
+                    let marks = [25, 20, 30, 40, 50, 70]; //235
+                    let sum = 0;
+                    for(let i = 0; i < marks.length; i++) {
+                        sum += marks[i];
                     }
-                    if(count == 5) break;
-                    console.log("- i", i);
-                }
+                    console.log(sum);
+
+                    let sum1 = marks.reduce((pv, cv) => pv + cv);
+                    console.log(sum1);
 
     </script>
     <noscript>Please enable JS.</noscript>
