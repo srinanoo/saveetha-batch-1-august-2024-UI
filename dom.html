@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <form name="frmLogin">
+        <input type="text" name="txtUsername" id="username" placeholder="Username:" class="clsInput"><br>
+        <input type="text" id="result"><br>
+        <input type="button" value="Click" class="clsInput" onclick="process();">
+    </form> -->
+
+    <!-- <div id="div1">This is a test Div Container</div>
+    <div id="div2">This is a <strong class="clsStrong">test</strong> Div Container</div>
+
+    <div id="div3"></div>
+    <button onclick="processDiv();">Click</button> -->
+
+    <input type="number" id="rows" placeholder="Enter no. of Rows"><br>
+    <input type="number" id="cols" placeholder="Enter no. of Columns"><br>
+    <button onclick="generate();">Generate Tabular Column</button>
+
+    <div id="results"></div>
+
+    <script>
+        function generate() {
+            let rows = parseInt(document.getElementById("rows").value);
+            let cols = parseInt(document.getElementById("cols").value);
+            // console.log(typeof rows, typeof cols);
+            let output = "<table border=1>";
+            for(let i = 0; i < rows; i++) {
+                output += "<tr>";
+                for(let j = 0; j < cols; j++) {
+                    output += "<td>" + j + "</td>";
+                }
+                output += "</tr>";
+            }
+            output += "</table>";
+            document.getElementById("results").innerHTML = output;
+        }
+        function processDiv() {
+            let div1 = document.getElementById("div1").innerText;
+            console.log(div1);
+            let div2 = document.getElementById("div2").innerHTML;
+            console.log(div2);
+
+            let div2a = document.getElementById("div2").innerText;
+            console.log(div2a);
+
+            document.getElementById("div3").innerHTML = "This is new <strong>Div</strong> Container";
+        }
+        function process() {
+            // console.log("Function is called");
+
+            // old way
+                // document.<name of the form>.<name of the input>.
+                let username = document.frmLogin.txtUsername.value;
+                console.log(username, " - old way");
+
+            // traditional way
+                // document.getElementById("<id attribute>").value
+                let username1 = document.getElementById("username").value;
+                console.log(username1, " - getElementById");
+                document.querySelector("#result").value = username1;
+
+                // document.getElementsByTagName("<name of the tag>")[index].value
+                let username2 = document.getElementsByTagName("input")[0].value;
+                console.log(username2, " - getElementsByTagName");
+
+                // document.getElementsByClassName("<class attribute>")[index].value
+                let username3 = document.getElementsByClassName("clsInput")[0].value;
+                console.log(username3, " - getElementsByClassName");
+
+                // document.getElementsByName("<name attribute>")[index].value
+                let username4 = document.getElementsByName("txtUsername")[0].value;
+                console.log(username4, " - getElementsByName");
+
+            // modern way
+                // document.querySelector("<css selector").value
+                let username5 = document.querySelector(".clsInput").value;
+                console.log(username5, " - querySelector");
+
+                // document.querySelectorAll("<css selector>")[index].value
+                let username6 = document.querySelectorAll(".clsInput")[0].value;
+                console.log(username6, " - querySelectorAll");
+        }
+    </script>
+    
+</body>
+</html>
