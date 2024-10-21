@@ -57,7 +57,6 @@ function createBlogPost() {
         )
     }
 }
-// createBlogPost();
 
 // readAll
 function readAllBlogPosts() {
@@ -95,7 +94,6 @@ function readAllBlogPosts() {
         )
     }
 }
-// readAllBlogPosts();
 
 // read Specific
 function readSpecificBlogPost() {
@@ -146,7 +144,6 @@ function readSpecificBlogPost() {
         )
     }
 }
-// readSpecificBlogPost();
 
 // update blog post
 function updateBlogPost() {
@@ -209,7 +206,6 @@ function updateBlogPost() {
         )
     }
 }
-// updateBlogPost();
 
 // delete blog post
 function deleteBlogPost() {
@@ -247,4 +243,11 @@ function deleteBlogPost() {
         )
     }
 }
-// deleteBlogPost();
+
+module.exports = {
+    createBlogPost,
+    readAllBlogPosts,
+    readSpecificBlogPost,
+    updateBlogPost,
+    deleteBlogPost
+}
