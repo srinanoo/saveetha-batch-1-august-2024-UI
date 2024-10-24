@@ -1,3 +1,3 @@
-const {readAllBlogPosts} = require('./blogModule');
+const blog = require('./blogModule');
 
-readAllBlogPosts();
+blog.readAllBlogPosts();

@@ -2,63 +2,48 @@ const fs = require('fs');
 const path = "./blog.json";
 
 // create
-function createBlogPost() {
+function createBlogPost(req, res) {
     try {
-        let obj = {
-            "id": 3,
-            "title": "Title 3",
-            "description": "Description 3"
-        }
+        let obj = req.body;
         fs.readFile(path, "utf8", (err, data) => {
             if(err)
                 console.log(err);
             else {
-                let res = JSON.parse(data);
-                // let flag = false;
-                // for(let i = 0; i < res.length; i++) {
-                //     if(res[i].title === obj.title) {
-                //         flag = true;
-                //         break;
-                //     }
-                // }
-                // let flag = res.filter(v => v.title === obj.title);
-                let flag = res.some(v => v.title === obj.title);
+                let result = JSON.parse(data);
+                let flag = result.some(v => v.title === obj.title);
             
                 if(flag) {
-                    res.write(
-                    {
-                        "data": "",
-                        "message": "Blog Title already exists!",
-                        "err": ""
-                    }
+                    res.json(
+                        {
+                            "data": "",
+                            "message": "Blog Title already exists!",
+                            "err": ""
+                        }
                     )
-                    res.end();
                 }
                 else {
-                    res.push(obj);
-                    fs.writeFileSync(path, JSON.stringify(res));
-                    res.write(
+                    result.push(obj);
+                    fs.writeFileSync(path, JSON.stringify(result));
+                    res.json(
                         {
                             "data": "",
                             "message": "Blog Created Successfully!",
                             "err": ""
                         }
                     )
-                    res.end();
                 }
             }
 
         })
 
     } catch(err) {
-        res.write(
+        res.json(
             {
                 "data": "",
                 "message": "",
                 "err": err.message
             }
         );
-        res.end();
     }
 }
 
@@ -71,63 +56,56 @@ function readAllBlogPosts(req, res) {
                 console.log(err);
             else {
                 if(result.length > 0){
-                    res.write(
-                        JSON.stringify(
+                    res.json(
                         {
                             "data": result,
                             "message": "",
                             "err": ""
-                        })
+                        }
                     );
-                    res.end();
                 } else {
-                    res.write(
-                        JSON.stringify(
+                    res.json(
                         {
                             "data": "",
                             "message": "No Blog Posts Found!",
                             "err": ""
-                        })
+                        }
                     );
-                    res.end();
                 }
             }
         })
     } catch (err) {
-        res.write(
-            JSON.stringify(
+        res.json(
             {
                 "data": "",
                 "message": "",
                 "err": err.message
-            })
+            }
         );
-        res.end();
     }
 }
 
 // read Specific
-function readSpecificBlogPost() {
+function readSpecificBlogPost(req, res) {
     try {
-        let title = "Blog 1sdfdsfsdfsdf";
+        let title = req.query.title;
         fs.readFile(path, "utf8", (err, data) => {
-            let res = JSON.parse(data);
+            let result = JSON.parse(data);
             if(err)
                 console.log(err);
             else {
-                if(res.length > 0) {
-                    let results = res.filter(v => v.title === title);
-                    if(results.length > 0) {
-                        console.log(
-                            JSON.stringify(
+                if(result.length > 0) {
+                    let temp = result.filter(v => v.title === title);
+                    if(temp.length > 0) {
+                        res.json(
                             {
-                                "data": results,
+                                "data": temp,
                                 "message": "",
                                 "err": ""
-                            })
+                            }
                         );
                     } else {
-                        console.log(
+                        res.json(
                             {
                                 "data": "",
                                 "message": "No Blog Posts Found!",
@@ -136,7 +114,7 @@ function readSpecificBlogPost() {
                         );
                     }
                 } else {
-                    console.log(
+                    res.json(
                         {
                             "data": "",
                             "message": "No Blog Posts Found!",
@@ -147,7 +125,7 @@ function readSpecificBlogPost() {
             }
         });
     } catch (err) {
-        console.log(
+        res.json(
             {
                 "data": "",
                 "message": "",
@@ -158,47 +136,26 @@ function readSpecificBlogPost() {
 }
 
 // update blog post
-function updateBlogPost() {
+function updateBlogPost(req, res) {
     try {
-        let obj = {
-            "id": 3,
-            "description": "DESCRIPTION 3"
-        };
+        let obj = req.body;
         fs.readFile(path, "utf8", (err, data) => {
-            let res = JSON.parse(data);
+            let result = JSON.parse(data);
             if(err)
                 console.log(err);
             else {
-                if(res.length > 0) {
-                    let i = res.findIndex(v => v.id === obj.id);
+                if(result.length > 0) {
+                    let i = result.findIndex(v => v.id == obj.id);
                     console.log(i);
-                    res[i] = {...res[i], ...obj};
-                    fs.writeFileSync(path, JSON.stringify(res));
-                    console.log({
+                    result[i] = {...result[i], ...obj};
+                    fs.writeFileSync(path, JSON.stringify(result));
+                    res.json({
                         "data": "",
                         "message": "Blog Post Updated!",
                         "err": ""
                     })
-                    // let results = res.filter(v => v.title === title);
-                    // if(results.length > 0) {
-                    //     console.log(
-                    //         {
-                    //             "data": results,
-                    //             "message": "",
-                    //             "err": ""
-                    //         }
-                    //     );
-                    // } else {
-                    //     console.log(
-                    //         {
-                    //             "data": "",
-                    //             "message": "No Blog Posts Found!",
-                    //             "err": ""
-                    //         }
-                    //     );
-                    // }
                 } else {
-                    console.log(
+                    res.json(
                         {
                             "data": "",
                             "message": "No Blog Posts Found!",
@@ -209,7 +166,7 @@ function updateBlogPost() {
             }
         });
     } catch (err) {
-        console.log(
+        res.json(
             {
                 "data": "",
                 "message": "",
