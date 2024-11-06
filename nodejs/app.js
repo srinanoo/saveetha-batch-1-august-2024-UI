@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
-const port = 4000;
+require('dotenv').config();
+const cors = require('cors');
+
+const port = process.env.PORT || 4000;
 
 const mongoose = require('mongoose');
 
@@ -30,9 +33,11 @@ app.use(express.urlencoded({ extended: true }));
 // });
 
 // DB Connection
-mongoose.connect("mongodb://localhost:27017/BlogManagement").then(() => {
-    console.log("MongoDB Connected...");
-});
+// mongoose.connect("mongodb://localhost:27017/BlogManagement").then(() => {
+//     console.log("MongoDB Connected...");
+// });
+mongoose.connect(process.env.MONGODB_URL)
+    .then(() => console.log("MongoDB Connected"));
 
 // Blog Routes
 const BlogRoutes = require('./routes/blogRoutes');
