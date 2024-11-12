@@ -43,6 +43,34 @@ mongoose.connect(process.env.MONGODB_URL)
 const BlogRoutes = require('./routes/blogRoutes');
 app.use("/api/v1/blog/", BlogRoutes);
 
+
+const jwt = require('jsonwebtoken');
+
+app.post("/api/v1/login/", (req, res) => {
+    const token = jwt.sign(
+        {"username": req.body.username}, 
+        process.env.SECRET_KEY,
+        { expiresIn: "1hr" }
+    );
+    // token format:
+        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkRpbmVzaCIsImlhdCI6MTczMTM4OTg3NH0.UB9flbfj_WtIiWFFvixJdZADgNrGZeXgsiQS3OEyV_M"
+    res.json({"username": req.body.username, "token": token});
+});
+
+app.post("/api/v1/validate", (req, res) => {
+    try {
+        console.log(req.body);
+        console.log(req.headers.authorization);
+        let token = req.headers.authorization.split(" ")[1];
+        let valid = jwt.verify(token, process.env.SECRET_KEY);
+        console.log(valid);
+        // let res = UserModel.find({username: valid.username});
+        res.json({"message": "Token received"});
+    } catch (err) {
+        res.json({"message": "Invalid token"});
+    }
+});
+
 // Category Routes
 // Likes Routes
 // Author Routes
